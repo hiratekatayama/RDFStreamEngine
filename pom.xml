@@ -1,0 +1,139 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>cqels</groupId>
+  <artifactId>cqels-all</artifactId>
+  <version>1.0.0</version>
+  <packaging>jar</packaging>
+
+  <name>cqelsserver</name>
+  
+  <url>https://maven.apache.org</url>
+	<build>
+	  <plugins>
+
+		 <plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			 <version>3.1</version>
+			 <configuration>
+			  <compilerVersion>1.8</compilerVersion>
+			  <source>1.8</source>
+			  <target>1.8</target>
+			 </configuration>
+		 </plugin>
+
+         <plugin>
+              <artifactId>maven-assembly-plugin</artifactId>
+              <configuration>
+                  <descriptorRefs>
+                      <descriptorRef>jar-with-dependencies</descriptorRef>
+                  </descriptorRefs>
+              </configuration>
+              <executions>
+                  <execution>
+                      <id>make-my-jar-with-dependencies</id>
+                      <phase>package</phase>
+                      <goals>
+                          <goal>single</goal>
+                      </goals>
+                  </execution>
+              </executions>
+          </plugin>
+	  </plugins>
+	</build>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+	<dependency>
+		<groupId>org.apache.jena</groupId>
+		<artifactId>jena-arq</artifactId>
+		<version>2.9.3</version>
+	</dependency>
+	<dependency>
+		<groupId>com.hp.hpl.jena</groupId>
+		<artifactId>tdb</artifactId>
+		<version>0.8.10</version>
+	</dependency>
+	<dependency>
+		<artifactId>je</artifactId>
+		<groupId>com.sleepycat</groupId>
+		<version>5.0.73</version>
+	</dependency>
+	<dependency>
+		<groupId>com.espertech</groupId>
+		<artifactId>esperio-stax</artifactId>
+		<version>4.2.0</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.apache.commons</groupId>
+		<artifactId>commons-math</artifactId>
+		<version>2.2</version>
+	</dependency>  
+	<dependency>
+	    <groupId>xml-apis</groupId>
+	    <artifactId>xml-apis</artifactId>
+	    <version>1.4.01</version>
+	</dependency>
+
+	 <dependency>
+		 <groupId>org.eclipse.jetty.websocket</groupId>
+	  	 <artifactId>websocket-client</artifactId>
+	  	 <version>9.4.0.RC3</version>
+	 </dependency>
+
+	 <dependency>
+		 <groupId>org.eclipse.jetty.websocket</groupId>
+	  	 <artifactId>websocket-server</artifactId>
+		 <version>9.4.0.RC3</version>
+	  </dependency>
+
+	  <dependency>
+		  <groupId>org.eclipse.jetty</groupId>
+		  <artifactId>jetty-server</artifactId>
+		  <version>9.4.0.RC3</version>
+	  </dependency>
+
+	  <dependency>
+		  <groupId>com.github.jsonld-java</groupId>
+		  <artifactId>jsonld-java</artifactId>
+		  <version>0.9.0</version>
+	  </dependency>
+
+	  <dependency>
+		  <groupId>com.fasterxml.jackson.core</groupId>
+		  <artifactId>jackson-databind</artifactId>
+		  <version>2.6.3</version>
+	  </dependency>
+
+	  <dependency>
+		  <groupId>org.apache.jena</groupId>
+		  <artifactId>jena-tdb</artifactId>
+		  <version>0.9.3</version>
+	  </dependency>
+
+      <dependency>
+          <groupId>org.apache.jena</groupId>
+          <artifactId>jena-tdb</artifactId>
+          <version>1.1.2</version>
+      </dependency>
+
+	  <dependency>
+		  <groupId>org.apache.jena</groupId>
+		  <artifactId>jena-tdb</artifactId>
+		  <version>3.1.0</version>
+	  </dependency>
+	  <dependency>
+		  <groupId>org.apache.jena</groupId>
+		  <artifactId>jena-tdb</artifactId>
+		  <version>0.9.3</version>
+	  </dependency>
+
+
+  </dependencies>
+ </project>
