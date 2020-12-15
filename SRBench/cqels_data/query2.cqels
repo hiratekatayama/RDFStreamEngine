@@ -1,0 +1,10 @@
+PREFIX lv: <http://deri.org/floorplan/>
+SELECT  ?person1 ?person2 
+FROM NAMED <http://deri.org/floorplan/>
+WHERE {
+GRAPH <http://deri.org/floorplan/> 
+{?loc1 lv:connected ?loc2}
+STREAM <http://deri.org/streams/rfid> [NOW] 
+{?person1 lv:detectedAt ?loc1} 
+STREAM <http://deri.org/streams/rfid> [RANGE 3s] {?person2 lv:detectedAt ?loc2}
+}
